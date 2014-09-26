@@ -19,3 +19,6 @@ $ python shellshock.py
 1 --- http://nomad5.ncep.noaa.gov/cgi-bin/pdisp_gfs.sh?ctlfile=gfs_00z.ctl&povlp=noovlp&ptype=map&dir
 ```
 
+References
+===========
+https://www.invisiblethreat.ca/2014/09/cve-2014-6271/

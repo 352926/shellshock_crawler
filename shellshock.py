@@ -27,7 +27,7 @@ def test():
     print "---", url
 
 def main():
-  for id, url in enumerate(search("filetype:sh inurl:cgi-bin", stop=1000)):
+  for id, url in enumerate(search("filetype:sh inurl:cgi-bin", stop=200)):
     if(validate(url)):
       print id, "!!!", url
     else:
